@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Repositories\ImageRepository;
 use App\Http\Repositories\UserRepository;
 use App\Http\Requests;
-use App\User;
+use App\Model\User;
 use Gate;
 use Illuminate\Http\Request;
 

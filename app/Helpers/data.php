@@ -1,5 +1,5 @@
 <?php
-use App\Post;
+use App\Model\Post;
 use App\Services\CategoryService;
 use App\Services\CommentService;
 use App\Services\PageService;

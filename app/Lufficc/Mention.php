@@ -8,7 +8,7 @@
 
 namespace Lufficc;
 
-use App\Comment;
+use App\Model\Comment;
 use App\Notifications\MentionedInComment;
 
 class Mention

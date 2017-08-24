@@ -7,7 +7,7 @@
  */
 namespace App\Http\Repositories;
 
-use App\File;
+use App\Model\File;
 use Illuminate\Http\Request;
 use Illuminate\Http\UploadedFile;
 use Storage;

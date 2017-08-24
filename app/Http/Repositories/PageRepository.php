@@ -7,8 +7,8 @@
  */
 namespace App\Http\Repositories;
 
-use App\Configuration;
-use App\Page;
+use App\Model\Configuration;
+use App\Model\Page;
 use Illuminate\Http\Request;
 use Parsedown;
 

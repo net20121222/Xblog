@@ -2,14 +2,14 @@
 
 namespace App\Providers;
 
-use App\Comment;
-use App\Page;
+use App\Model\Comment;
+use App\Model\Page;
+use App\Model\Post;
+use App\Model\User;
 use App\Policies\CommentPolicy;
 use App\Policies\PagePolicy;
 use App\Policies\PostPolicy;
 use App\Policies\UserPolicy;
-use App\Post;
-use App\User;
 use Illuminate\Contracts\Auth\Access\Gate as GateContract;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
 

@@ -12,22 +12,22 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        /*\App\User::truncate();*/
-        \App\Post::truncate();
-        \App\Category::truncate();
-        \App\Tag::truncate();
+        /*\App\Model\User::truncate();*/
+        \App\Model\Post::truncate();
+        \App\Model\Category::truncate();
+        \App\Model\Tag::truncate();
         Model::unguard();
-        factory(App\Category::class)->create(['name' => 'Android']);
-        factory(App\Category::class)->create(['name' => 'Java']);
-        factory(App\Category::class)->create(['name' => 'Php']);
-        factory(App\Category::class)->create(['name' => 'Spring']);
-        factory(App\Category::class)->create(['name' => 'Laravel']);
-        factory(App\Category::class)->create(['name' => 'Vue']);
-        factory(App\Category::class)->create(['name' => 'Js']);
-        factory(App\Tag::class, 10)->create();
-        $tag_ids = \App\Tag::all();
-        factory(App\User::class, 10)->create()->each(function ($u) use ($tag_ids) {
-            factory(App\Post::class, mt_rand(0, 10))->make(
+        factory(App\Model\Category::class)->create(['name' => 'Android']);
+        factory(App\Model\Category::class)->create(['name' => 'Java']);
+        factory(App\Model\Category::class)->create(['name' => 'Php']);
+        factory(App\Model\Category::class)->create(['name' => 'Spring']);
+        factory(App\Model\Category::class)->create(['name' => 'Laravel']);
+        factory(App\Model\Category::class)->create(['name' => 'Vue']);
+        factory(App\Model\Category::class)->create(['name' => 'Js']);
+        factory(App\Model\Tag::class, 10)->create();
+        $tag_ids = \App\Model\Tag::all();
+        factory(App\Model\User::class, 10)->create()->each(function ($u) use ($tag_ids) {
+            factory(App\Model\Post::class, mt_rand(0, 10))->make(
                 ['category_id' => mt_rand(1, 7)]
             )->each(function ($post) use ($u, $tag_ids) {
                 $p = $u->posts()->save($post);

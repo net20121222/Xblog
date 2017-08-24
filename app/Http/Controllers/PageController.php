@@ -31,7 +31,7 @@ class PageController extends Controller
             abort(404);
         }
         $this->onPageShowing($page);
-        $comments = $this->commentRepository->getByCommentable('App\Page', $page->id);
+        $comments = $this->commentRepository->getByCommentable('App\Model\Page', $page->id);
         return view('page.show', compact('page', 'comments'));
     }
 
@@ -42,7 +42,7 @@ class PageController extends Controller
             $unreadNotifications = $user->unreadNotifications;
             foreach ($unreadNotifications as $notifications) {
                 $comment = $notifications->data;
-                if ($comment['commentable_type'] == 'App\Page' && $comment['commentable_id'] == $page->id) {
+                if ($comment['commentable_type'] == 'App\Model\Page' && $comment['commentable_id'] == $page->id) {
                     $notifications->markAsRead();
                 }
             }

@@ -81,7 +81,7 @@
                             'commentable'=>$post,
                             'comments'=>isset($comments) ? $comments:[],
                             'redirect'=>request()->fullUrl(),
-                             'commentable_type'=>'App\Post'])
+                             'commentable_type'=>'App\Model\Post'])
                 @endif
             </div>
         </div>

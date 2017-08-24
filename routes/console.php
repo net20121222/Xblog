@@ -24,13 +24,13 @@ Artisan::command('post {action}', function ($action) {
     $markdownParser = new MarkDownParser();
     switch ($action) {
         case 'des2html':
-            foreach (\App\Post::all() as $post) {
+            foreach (\App\Model\Post::all() as $post) {
                 $post->description = $markdownParser->parse($post->description, false);
                 $this->comment($post->save());
             }
             break;
         case 'content2html':
-            foreach (\App\Post::all() as $post) {
+            foreach (\App\Model\Post::all() as $post) {
                 $post->html_content = $markdownParser->parse($post->content, false);
                 $this->comment($post->save());
             }
@@ -41,13 +41,13 @@ Artisan::command('post {action}', function ($action) {
 
 
 Artisan::command('avatar', function () {
-    $this->comment(\App\User::whereNull('avatar')->update(['avatar' => config('app.avatar')]));
+    $this->comment(\App\Model\User::whereNull('avatar')->update(['avatar' => config('app.avatar')]));
 })->describe("set users's null avatar to default avatar");
 
 
 Artisan::command('xssProtection', function () {
     $mp = new MarkDownParser();
-    foreach (\App\Comment::withoutGlobalScopes()->get() as $comment) {
+    foreach (\App\Model\Comment::withoutGlobalScopes()->get() as $comment) {
         $this->comment("----------------------------------------------------------------------------------------\n");
         $this->comment($comment->content . "\n\n");
         $this->comment($comment->html_content . "\n\n");
@@ -61,19 +61,19 @@ Artisan::command('xssProtection', function () {
 })->describe("protect user comments from xss");
 
 Artisan::command('comment:delete-uv', function () {
-    $result = \App\Comment::withoutGlobalScope(VerifiedCommentScope::class)->where('status', 0)->delete();
+    $result = \App\Model\Comment::withoutGlobalScope(VerifiedCommentScope::class)->where('status', 0)->delete();
     $this->comment("Delete $result comments.");
     cache()->flush();
 })->describe("delete un verified comments");
 
 Artisan::command('ip:delete-ub', function () {
-    $result = \App\Ip::where('blocked', 0)->delete();
+    $result = \App\Model\Ip::where('blocked', 0)->delete();
     $this->comment("Delete $result ips.");
     cache()->flush();
 })->describe("delete un verified comments");
 
 Artisan::command('files:generate-url {disk}', function ($disk) {
-    $files = \App\File::all();
+    $files = \App\Model\File::all();
     $storage = Storage::disk($disk);
     $count = 0;
     foreach ($files as $file) {

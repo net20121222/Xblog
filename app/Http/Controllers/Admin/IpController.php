@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Http\Repositories\IpRepository;
 use App\Http\Requests;
-use App\Ip;
+use App\Model\Ip;
 use Gate;
 
 class IPController extends Controller

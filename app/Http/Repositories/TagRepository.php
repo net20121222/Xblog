@@ -7,8 +7,8 @@
  */
 namespace App\Http\Repositories;
 
-use App\Post;
-use App\Tag;
+use App\Model\Post;
+use App\Model\Tag;
 use Illuminate\Http\Request;
 
 /**

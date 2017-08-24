@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 
-use App\Comment;
+use App\Model\Comment;
 use App\Http\Repositories\CommentRepository;
 use App\Http\Repositories\PostRepository;
 use App\Http\Requests;

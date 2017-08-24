@@ -10,7 +10,7 @@ use App\Http\Repositories\PostRepository;
 use App\Http\Repositories\TagRepository;
 use App\Http\Requests;
 use App\Notifications\UserRegistered;
-use App\Post;
+use App\Model\Post;
 use Carbon\Carbon;
 use Chumper\Zipper\Facades\Zipper;
 use File;

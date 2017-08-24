@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Model;
 
 use App\Scopes\VerifiedCommentScope;
 use Illuminate\Database\Eloquent\Model;
@@ -62,8 +62,8 @@ class Comment extends Model
         if (empty($this->commentableData)) {
             $this->commentableData['deleted'] = false;
             switch ($this->commentable_type) {
-                case 'App\Post':
-                    $post = app('App\Post')->where('id', $this->commentable_id)->select('title', 'slug')->first();
+                case 'App\Model\Post':
+                    $post = app('App\Model\Post')->where('id', $this->commentable_id)->select('title', 'slug')->first();
                     $this->commentableData['type'] = '文章';
                     if ($post == null) {
                         $this->commentableData['deleted'] = true;
@@ -72,8 +72,8 @@ class Comment extends Model
                     $this->commentableData['title'] = $post->title;
                     $this->commentableData['url'] = route('post.show', $post->slug);
                     break;
-                case 'App\Page':
-                    $page = app('App\Page')->where('id', $this->commentable_id)->select('name', 'display_name')->first();
+                case 'App\Model\Page':
+                    $page = app('App\Model\Page')->where('id', $this->commentable_id)->select('name', 'display_name')->first();
                     $this->commentableData['type'] = '页面';
                     if ($page == null) {
                         $this->commentableData['deleted'] = true;

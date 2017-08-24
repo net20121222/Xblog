@@ -7,7 +7,7 @@
  */
 namespace App\Http\Repositories;
 
-use App\Map;
+use App\Model\Map;
 use Illuminate\Http\Request;
 
 /**

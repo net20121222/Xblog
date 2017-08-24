@@ -9,7 +9,7 @@
 namespace App\Observers;
 
 
-use App\Comment;
+use App\Model\Comment;
 use App\Notifications\ReceivedComment;
 
 class CommentObserver

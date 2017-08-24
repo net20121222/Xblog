@@ -7,7 +7,7 @@
  */
 namespace App\Http\Repositories;
 
-use App\User;
+use App\Model\User;
 use Illuminate\Http\Request;
 
 /**

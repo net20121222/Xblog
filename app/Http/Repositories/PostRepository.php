@@ -7,9 +7,9 @@
  */
 namespace App\Http\Repositories;
 
-use App\Configuration;
-use App\Post;
-use App\Tag;
+use App\Model\Configuration;
+use App\Model\Post;
+use App\Model\Tag;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Lufficc\MarkDownParser;

@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Repositories\TagRepository;
-use App\Tag;
+use App\Model\Tag;
 use Illuminate\Http\Request;
 use XblogConfig;
 

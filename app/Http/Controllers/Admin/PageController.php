@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 
 use App\Http\Repositories\PageRepository;
-use App\Page;
+use App\Model\Page;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -62,7 +62,7 @@ class PageController extends Controller
             $unreadNotifications = $user->unreadNotifications;
             foreach ($unreadNotifications as $notifications) {
                 $comment = $notifications->data;
-                if ($comment['commentable_type'] == 'App\Page' && $comment['commentable_id'] == $page->id) {
+                if ($comment['commentable_type'] == 'App\Model\Page' && $comment['commentable_id'] == $page->id) {
                     $notifications->markAsRead();
                 }
             }

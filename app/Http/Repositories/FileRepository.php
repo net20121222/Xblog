@@ -9,7 +9,7 @@
 namespace App\Http\Repositories;
 
 
-use App\File;
+use App\Model\File;
 use Illuminate\Http\UploadedFile;
 use Lufficc\FileUploadManager;
 

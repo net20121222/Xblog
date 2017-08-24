@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 
 use App\Http\Repositories\TagRepository;
-use App\Tag;
+use App\Model\Tag;
 use Illuminate\Http\Request;
 use XblogConfig;
 

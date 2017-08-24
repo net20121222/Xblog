@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Comment;
+use App\Model\Comment;
 use App\Http\Repositories\CommentRepository;
 use App\Http\Requests;
 use Gate;

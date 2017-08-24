@@ -4,8 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Contracts\XblogCache;
 use App\Http\Requests;
-use App\Page;
-use App\Post;
+use App\Model\Page;
+use App\Model\Post;
 
 class GeneratedController extends Controller
 {

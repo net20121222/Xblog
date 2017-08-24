@@ -10,7 +10,7 @@ namespace App\Services;
 
 
 use App\Http\Repositories\PostRepository;
-use App\Post;
+use App\Model\Post;
 use Lufficc\Post\PostHelper;
 
 class PostService

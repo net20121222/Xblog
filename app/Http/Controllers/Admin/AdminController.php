@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Comment;
+use App\Model\Comment;
 use App\Http\Controllers\Controller;
 use App\Http\Repositories\CategoryRepository;
 use App\Http\Repositories\CommentRepository;
@@ -13,10 +13,10 @@ use App\Http\Repositories\PostRepository;
 use App\Http\Repositories\TagRepository;
 use App\Http\Repositories\UserRepository;
 use App\Http\Requests;
-use App\Ip;
-use App\Page;
+use App\Model\Ip;
+use App\Model\Page;
 use DB;
-use App\User;
+use App\Model\User;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller

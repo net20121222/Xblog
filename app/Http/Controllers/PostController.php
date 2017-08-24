@@ -37,7 +37,7 @@ class PostController extends Controller
     {
         $post = get_post($slug);
         $recommendedPosts = $this->postRepository->recommendedPosts($post);
-        $comments = $this->commentRepository->getByCommentable('App\Post', $post->id);
+        $comments = $this->commentRepository->getByCommentable('App\Model\Post', $post->id);
         return view('post.show', compact('post', 'comments', 'recommendedPosts'));
     }
 }

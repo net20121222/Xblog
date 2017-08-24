@@ -9,7 +9,7 @@
 namespace Lufficc\Config;
 
 
-use App\Configuration;
+use App\Model\Configuration;
 use Lufficc\Exception\UnConfigurableException;
 
 trait ConfigureHelper

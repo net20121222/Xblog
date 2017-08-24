@@ -31,7 +31,7 @@
                         'commentable'=>$page,
                         'comments'=>isset($comments) ? $comments:[],
                         'redirect'=>request()->fullUrl(),
-                        'commentable_type'=>'App\Page'])
+                        'commentable_type'=>'App\Model\Page'])
                 @endif
             </div>
         </div>

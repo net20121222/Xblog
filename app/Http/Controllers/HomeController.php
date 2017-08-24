@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Repositories\PostRepository;
-use App\Post;
+use App\Model\Post;
 use Illuminate\Http\Request;
 use XblogConfig;
 

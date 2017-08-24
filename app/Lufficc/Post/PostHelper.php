@@ -1,7 +1,7 @@
 <?php
 namespace Lufficc\Post;
 
-use App\Post;
+use App\Model\Post;
 
 /**
  * Created by PhpStorm.
@@ -26,7 +26,7 @@ trait PostHelper
             $unreadNotifications = $user->unreadNotifications;
             foreach ($unreadNotifications as $notifications) {
                 $comment = $notifications->data;
-                if ($comment['commentable_type'] == 'App\Post' && $comment['commentable_id'] == $post->id) {
+                if ($comment['commentable_type'] == 'App\Model\Post' && $comment['commentable_id'] == $post->id) {
                     $notifications->markAsRead();
                 }
             }

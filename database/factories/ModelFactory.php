@@ -11,7 +11,7 @@
 |
 */
 
-$factory->define(App\User::class, function (Faker\Generator $faker) {
+$factory->define(App\Model\User::class, function (Faker\Generator $faker) {
     return [
         'name' => $faker->name,
         'email' => $faker->safeEmail,
@@ -20,7 +20,7 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
     ];
 });
 
-$factory->define(App\Post::class, function (Faker\Generator $faker) {
+$factory->define(App\Model\Post::class, function (Faker\Generator $faker) {
     $html_content = join("\n\n", $faker->paragraphs(mt_rand(7, 20)));
     return [
         'title' => $faker->sentence(mt_rand(5, 10)),
@@ -31,18 +31,18 @@ $factory->define(App\Post::class, function (Faker\Generator $faker) {
         'description' => $faker->sentence(mt_rand(5, 15)),
         'status' => 1,
         /*'category_id' => function () {
-            return factory(App\Category::class)->create()->id;
+            return factory(App\Model\Category::class)->create()->id;
         },*/
     ];
 });
 
-$factory->define(App\Category::class, function (Faker\Generator $faker) {
+$factory->define(App\Model\Category::class, function (Faker\Generator $faker) {
     return [
         'name' => str_random(7),
     ];
 });
 
-$factory->define(App\Tag::class, function (Faker\Generator $faker) {
+$factory->define(App\Model\Tag::class, function (Faker\Generator $faker) {
     return [
         'name' => str_random(7),
     ];

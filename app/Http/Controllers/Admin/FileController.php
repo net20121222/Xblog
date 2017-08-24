@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\File;
+use App\Model\File;
 use App\Http\Controllers\Controller;
 use App\Http\Repositories\ImageRepository;
 use App\Http\Repositories\UnknownFileRepository;

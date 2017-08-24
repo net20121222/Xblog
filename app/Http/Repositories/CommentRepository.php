@@ -7,7 +7,7 @@
  */
 namespace App\Http\Repositories;
 
-use App\Comment;
+use App\Model\Comment;
 use App\Scopes\VerifiedCommentScope;
 use Illuminate\Http\Request;
 use Lufficc\Exception\CommentNotAllowedException;
