@@ -19,6 +19,7 @@ trait CommentHelper
         $configuration = $this->configuration ? $this->configuration->config : null;
         if (!$configuration) {
             $configuration = [];
+            
             $configuration['comment_info'] = 'default';
             $configuration['comment_type'] = 'default';
         }
