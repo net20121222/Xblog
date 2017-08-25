@@ -5,7 +5,6 @@ use App\Services\CommentService;
 use App\Services\PageService;
 use App\Services\PostService;
 use App\Services\TagService;
-use App\Services\ThemeService;
 
 /**
  * Created by PhpStorm.
